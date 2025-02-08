@@ -3,12 +3,6 @@
 ## Overview
 This simulation is designed to make the Husky robot move inside a track and complete one full lap without crossing lane boundaries. The challenge is to balance speed and accuracy using a **PID controller** while processing the camera feed with **OpenCV** to detect the track boundaries.
 
-## Dependencies
-Ensure you have the following libraries installed before running the simulation:
-
-```bash
-pip install gym numpy opencv-python pybullet LaRoboLiga24
-```
 
 ## How It Works
 
@@ -54,7 +48,7 @@ kd = 0.000034  # Derivative gain
 Run the following Python script:
 
 ```bash
-python simulation.py
+python PS1_soln.py.py
 ```
 
 ## Visual Debugging
@@ -66,23 +60,12 @@ The script includes OpenCV windows to visualize the processed track image:
 - The simulation stops automatically after **one full lap**.
 - You can manually stop it by pressing **'q'** in the OpenCV window.
 
-## File Structure
-```
-project_root/
-├── simulation.py   # Main simulation script
-├── urdf/           # URDF files for Husky and environment
-│   ├── husky.urdf
-│   ├── track.urdf
-│   └── ...
-└── README.md       # This documentation
-```
-
 ## Future Improvements
 - **Fine-tuning PID parameters** for smoother movement.
 - **Adding obstacle detection** using depth cameras.
 - **Enhancing lane detection** with more robust image processing.
 
-# RoboLeague Challenge - Husky Ball Scoring
+# RoboLeague Challenge - Husky Ball Scoring(PS2)
 
 ## Overview
 The RoboLeague challenge involves controlling a Husky robot to pick up balls and shoot them into goalposts while avoiding a goalkeeper. The goal is to develop an autonomous strategy for efficient navigation, ball collection, and scoring.
@@ -98,7 +81,7 @@ The RoboLeague challenge involves controlling a Husky robot to pick up balls and
 - **Robot:** Husky (UGV with a robotic gripper)
 - **Sensors:** Camera (for ball and goal detection), Lidar (for obstacle detection)
 - **Arena:** Multiple balls and two goalposts
-- **Opponent:** A moving goalkeeper trying to block shots
+- **Opponent:** A  goalkeeper trying to block shots
 
 ## Implementation Details
 - **Ball Detection:** Uses computer vision techniques to locate balls in the environment.
@@ -114,31 +97,11 @@ The RoboLeague challenge involves controlling a Husky robot to pick up balls and
 - **Python** for scripting robotic behaviors
 - **MoveIt!** for robotic arm control
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone <repository-link>
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Launch the simulation:
-   ```bash
-   roslaunch husky_ball_sim simulation.launch
-   ```
-4. Run the autonomous control script:
-   ```bash
-   python husky_controller.py
-   ```
 
 ## Future Improvements
 - Enhance ball detection using deep learning.
 - Implement a reinforcement learning-based strategy.
 - Improve obstacle avoidance with advanced path planning.
 
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 
