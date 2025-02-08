@@ -82,8 +82,63 @@ project_root/
 - **Adding obstacle detection** using depth cameras.
 - **Enhancing lane detection** with more robust image processing.
 
-## Author
-Om Swastik Panda
+# RoboLeague Challenge - Husky Ball Scoring
 
-For any issues or improvements, feel free to contribute!
+## Overview
+The RoboLeague challenge involves controlling a Husky robot to pick up balls and shoot them into goalposts while avoiding a goalkeeper. The goal is to develop an autonomous strategy for efficient navigation, ball collection, and scoring.
+
+## Objectives
+- Detect and navigate towards balls.
+- Pick up the ball using the robotic gripper.
+- Identify goalposts and align for an accurate shot.
+- Avoid obstacles, including a moving goalkeeper.
+- Optimize the scoring process for efficiency.
+
+## Environment
+- **Robot:** Husky (UGV with a robotic gripper)
+- **Sensors:** Camera (for ball and goal detection), Lidar (for obstacle detection)
+- **Arena:** Multiple balls and two goalposts
+- **Opponent:** A moving goalkeeper trying to block shots
+
+## Implementation Details
+- **Ball Detection:** Uses computer vision techniques to locate balls in the environment.
+- **Goalpost Detection:** Identifies goalposts and determines the best shooting angle.
+- **Navigation:** Uses path planning algorithms to move towards the ball and goal.
+- **Gripping & Shooting:** Controls the robotic arm to pick up and shoot balls.
+- **Avoidance Strategy:** Detects obstacles and dynamically adjusts path to avoid collisions.
+
+## Technologies Used
+- **ROS (Robot Operating System)** for robot control
+- **OpenCV** for computer vision
+- **Gazebo** for simulation
+- **Python** for scripting robotic behaviors
+- **MoveIt!** for robotic arm control
+
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone <repository-link>
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Launch the simulation:
+   ```bash
+   roslaunch husky_ball_sim simulation.launch
+   ```
+4. Run the autonomous control script:
+   ```bash
+   python husky_controller.py
+   ```
+
+## Future Improvements
+- Enhance ball detection using deep learning.
+- Implement a reinforcement learning-based strategy.
+- Improve obstacle avoidance with advanced path planning.
+
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
 
