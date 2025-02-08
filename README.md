@@ -101,7 +101,5 @@ The RoboLeague challenge involves controlling a Husky robot to pick up balls and
 ## Future Improvements
 - Enhance ball detection using deep learning.
 - Implement a reinforcement learning-based strategy.
-- Improve obstacle avoidance with advanced path planning.
-
 
 
